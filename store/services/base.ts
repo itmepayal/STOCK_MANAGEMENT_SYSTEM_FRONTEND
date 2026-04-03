@@ -15,13 +15,17 @@ const baseQuery = fetchBaseQuery({
   },
 });
 
-const baseQueryWithReauth: BaseQueryFn<any, unknown, any> = async (
+const baseQueryWithReauth: BaseQueryFn<any, unknown, unknown> = async (
   args,
   api,
   extraOptions,
 ) => {
   let result = await baseQuery(args, api, extraOptions);
-  if (result?.error?.status === 401) {
+
+  if (
+    result.error &&
+    (result.error.status === 401 || result.error.status === "FETCH_ERROR")
+  ) {
     if ((args as any).url === "/auth/refresh") {
       api.dispatch(logout());
       return result;
@@ -47,7 +51,10 @@ const baseQueryWithReauth: BaseQueryFn<any, unknown, any> = async (
 
     const refreshData = refreshResult?.data?.data;
 
-    if (refreshData?.access_token) {
+    console.log(refreshResult);
+    console.log(refreshData);
+
+    if (refreshData) {
       api.dispatch(
         setCredentials({
           user: state.auth.user,
