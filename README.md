@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Stock Intelligence
 
-## Getting Started
+[![Loom Video](https://img.shields.io/badge/Watch-Video-blue?logo=loom)](https://www.loom.com/share/a8f9fbf5148647f287230df4c0f6f518)
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Access the live platform here: [StockAI](https://stock-management-system-frontend-ya.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Watch demo video: [Loom Video](https://www.loom.com/share/a8f9fbf5148647f287230df4c0f6f518)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Overview
 
-## Learn More
+**StockAI** is a cutting-edge platform for real-time stock insights and predictions. Powered by AI, it helps traders analyze markets, track portfolios, and make data-driven investment decisions. Built for modern traders, StockAI combines simplicity, interactivity, and intelligence in one powerful platform.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Real-time Stock Insights**: Get live market updates and trends.
+- **AI Predictions**: Leverage AI-driven predictions to make informed trading decisions.
+- **Portfolio Management**: Track your stocks and investments efficiently.
+- **Market Analysis**: View detailed charts, performance metrics, and summaries.
+- **User Authentication**: Secure login system for personal dashboards.
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
+- **Clean & Modern UI**: Built with intuitive components and smooth interactions.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Screenshots
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Portfolio](./screenshots/portfolio.png)  
+![Login](./screenshots/login.png)  
+![Register](./screenshots/register.png)  
+![Dashboard](./screenshots/dashboard.png)  
+![Company](./screenshots/company.png)  
+![Settings](./screenshots/settings.png)
+
+---
+
+## Tech Stack
+
+- **Frontend**: Next.js, React, Tailwind CSS, TypeScript
+- **Charts & Data Visualization**: Recharts, Lucide Icons
+- **State Management**: Redux Toolkit / RTK Query
+- **Authentication**: JWT, Secure Login
+- **APIs**: Real-time stock market data & AI-driven predictions
+
+---
+
+## Installation & Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/stockai.git
+   cd stockai
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+The app will be running at `http://localhost:3000`.
+
+---
+
+## Project Structure
+
+stockai/
+├─ app/
+├─ components/
+├─ hooks/
+├─ lib/
+├─ public/
+├─ schemas/
+├─ store/
+├─ AGENTS.md
+├─ CLAUDE.md
+├─ components.json
+├─ next.config.ts
+├─ postcss.config.mjs
+├─ eslint.config.mjs
+├─ tsconfig.json
+├─ package.json
+├─ package-lock.json
+└─ README.md
+
+---
+
+## Usage
+
+- Sign up or log in to your account.
+- Add stocks to your portfolio.
+- Track stock performance and receive AI predictions.
+- Analyze detailed charts for market trends.
+- Adjust your profile settings and preferences.
+
+---
+
+## Contact
+
+Developed with ❤️ by [Payal Yadav](https://github.com/itmepayal)
+
+---
+
+## Acknowledgements
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Recharts](https://recharts.org/)
+- [Lucide Icons](https://lucide.dev/)
