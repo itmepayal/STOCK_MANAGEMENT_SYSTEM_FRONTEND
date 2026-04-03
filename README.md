@@ -30,12 +30,12 @@ Watch demo video: [Loom Video](https://www.loom.com/share/a8f9fbf5148647f287230d
 
 ## Screenshots
 
-![Portfolio](./screenshots/portfolio.png)  
-![Login](./screenshots/login.png)  
-![Register](./screenshots/register.png)  
-![Dashboard](./screenshots/dashboard.png)  
-![Company](./screenshots/company.png)  
-![Settings](./screenshots/settings.png)
+![Portfolio](./public/screenshots/portfolio.png)
+![Login](./public/screenshots/login.png)
+![Register](./public/screenshots/register.png)
+![Dashboard](./public/dashboard.png)
+![Company](./public/screenshots/company.png)
+![Settings](./public/screenshots/settings.png)
 
 ---
 
