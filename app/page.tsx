@@ -2,10 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 import { TrendingUp, BarChart3, Menu, X } from "lucide-react";
 
 export default function HeroSection() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const accessToken = useSelector((state: any) => state.auth.accessToken);
+  const isLoggedIn = !!accessToken;
 
   return (
     <section className="flex flex-col items-center text-white text-sm font-[Poppins] relative overflow-hidden">
@@ -66,18 +70,22 @@ export default function HeroSection() {
           </Link>
         </div>
 
-        {/* Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <Link href="/dashboard">
-            <button className="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-md transition">
-              Get started
-            </button>
-          </Link>
-          <Link href="/login">
-            <button className="px-6 py-2 border border-slate-400 rounded-md hover:bg-slate-300/20 transition">
-              Login
-            </button>
-          </Link>
+          {isLoggedIn ? (
+            <Link href="/dashboard">
+              <button className="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-md transition">
+                Dashboard
+              </button>
+            </Link>
+          ) : (
+            <>
+              <Link href="/login">
+                <button className="px-6 py-2 border border-slate-400 rounded-md hover:bg-slate-300/20 transition">
+                  Login
+                </button>
+              </Link>
+            </>
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -136,12 +144,14 @@ export default function HeroSection() {
 
       {/* Buttons */}
       <div className="flex flex-col md:flex-row items-center gap-4 mt-8">
-        <Link href="/dashboard">
-          <button className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 px-7 h-11 rounded-lg transition">
-            <BarChart3 className="w-5 h-5" />
-            Get started
-          </button>
-        </Link>
+        {isLoggedIn && (
+          <Link href="/dashboard">
+            <button className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 px-7 h-11 rounded-lg transition">
+              <BarChart3 className="w-5 h-5" />
+              Get started
+            </button>
+          </Link>
+        )}
 
         <Link href="#visualization">
           <button className="flex items-center gap-2 border border-slate-400 px-8 h-11 rounded-lg hover:bg-white/10 transition">

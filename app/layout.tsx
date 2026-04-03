@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display, Fira_Code } from "next/font/google";
 import "./globals.css";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Providers } from "@/app/providers";
+import { Toaster } from "@/components/ui/sonner";
 
 const fontSans = Poppins({
   subsets: ["latin"],
@@ -33,7 +36,10 @@ export default function RootLayout({
       <body
         className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased`}
       >
-        {children}
+        <Providers>
+          <TooltipProvider>{children}</TooltipProvider>
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );
